@@ -1,5 +1,6 @@
 require "scraper/version"
 
+require 'rubygems'
 require 'mechanize'
 require 'kconv'
 require 'open-uri'
