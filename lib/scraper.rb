@@ -8,7 +8,7 @@ require 'hpricot'
 
 module Scraper
   class Core
-    attr_accessor :url
+    attr_accessor :url, :document
     def initialize
       @useragent = 'Mac Safari'
       @mechanize = Mechanize.new
