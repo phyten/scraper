@@ -26,7 +26,7 @@ module Scraper
       return @document
     end
     def title
-      content.search('title').inner_text.to_s.toutf8
+      content.search('title').to_s.toutf8.gsub(/(<title>|<\/title>)/, "")
     end
     def reload
       page = @mechanize.get(@url)
