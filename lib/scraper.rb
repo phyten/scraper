@@ -24,7 +24,7 @@ module Scraper
       return @document
     end
     def title
-      content.search('title').inner_text.to_s
+      content.search('title').inner_text.to_s.toutf8
     end
     def reload
       page = @mechanize.get(@url)
