@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 require "scraper/version"
 
 require 'rubygems'
