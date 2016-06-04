@@ -13,8 +13,11 @@ module Scraper
     attr_accessor :url, :document
     def initialize
       @useragent = 'Mac Safari'
-      @mechanize = Mechanize.new
-      @mechanize.read_timeout = 20
+      @mechanize = Mechanize.new do |a| 
+        a.follow_meta_refresh = true
+        a.keep_alive = false
+      end
+      @mechanize.read_timeout = 60
       @mechanize.max_history = 10
       @mechanize.user_agent_alias = @useragent
     end
